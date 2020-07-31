@@ -38,14 +38,25 @@ export class Main extends Component {
           popupVisible={this.state.popupVisible}
           onClick={this.handleVisiblePopup}
         />
-        <HeaderText handleStateVisiblePopup={this.handleStateVisiblePopup}/>
+
+        <HeaderText
+          handleStateVisiblePopup={this.handleStateVisiblePopup}
+        />
+
         <SectionText/>
+
         <SectionHuckUs/>
+
         <SectionPartners/>
+
         <SectionSlider/>
+
         <SliderTeam/>
+
         <ChoosePlan/>
+
         <Subscribe/>
+        
       </Fragment>
     );
   }
