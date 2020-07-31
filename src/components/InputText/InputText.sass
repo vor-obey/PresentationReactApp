@@ -1,0 +1,74 @@
+@import 'src/mixins'
+@import "src/variables"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.text-input__email
+  @include flexBox(column, center, center)
+  margin-bottom: 40px
+  width: 100%
+  >h2
+    text-align: center
+    margin-bottom: 40px
+
+
+.subscribe-info-input
+  position: relative
+  width: 50%
+  min-width: 600px
+
+  > input
+    box-sizing: border-box
+    @include border(#d4d4d5, $r70)
+    @include mainFonts(16px, $grey)
+    outline: none
+    width: 100%
+    padding: 15px 15px 15px 15px
+    position: relative
+
+  > button
+    @include mainFonts(16px, $white)
+    position: absolute
+    //right: 7px
+    right: 3px
+    top: 3px
+    outline: none
+    padding: 13px 40px
+    border-radius: $r70
+    border: none
+    background: #6fc754
+    cursor: pointer
+
+    &:active
+      transform: scale(1.01)
+      box-shadow: 0 0 5px grey
+
+//---------------------Media max-width 767px-----------------
+
+@include max-screen($sm)
+  .subscribe-info-input
+    width: 85%
+    min-width: 0
+
+//---------------------Media max-width 680px-----------------
+
+@include max-screen($middle)
+  .subscribe-info-input
+    width: 90%
+
+    > input
+      @include mainFonts(14px, $grey)
+      padding: 10px 15px 10px 15px
+
+    > button
+      @include mainFonts(18px, $white)
+      width: 100%
+      margin-top: 20px
+      position: inherit
+      padding: 10px 0
+      border: none
+      background: $blue
+
+      &:active
+        transform: scale(1.01)
+        box-shadow: 0 0 5px grey

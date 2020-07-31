@@ -1,0 +1,53 @@
+@import "src/mixins"
+@import "src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.burger-box
+  position: relative
+  width: 30px
+  height: 25px
+  display: none
+  margin-right: 40px
+  cursor: pointer
+
+  &:hover .row-burger
+    background: $blue
+
+  .row-burger
+    width: 30px
+    height: 4px
+    background: #000
+    transition: .5s
+
+  .row-top
+    position: absolute
+    top: 0
+
+  .row-bottom
+    position: absolute
+    bottom: 0
+
+//--------------------Animation burger-------------------
+
+.active-top
+  transform: rotateZ(45deg) translate(8px, 9px)
+
+.active-middle
+  transform: translateX(-40px)
+  opacity: 0
+
+.active-bottom
+  transform: rotateZ(-45deg) translate(6px, -7px)
+
+.row-burger-active
+  width: 30px
+  height: 4px
+  background: $white
+  transition: .5s
+
+//-------------Media max-width 1023px-----------------
+
+@include max-screen($md)
+  .burger-box
+    @include flexBox(null, null, center)

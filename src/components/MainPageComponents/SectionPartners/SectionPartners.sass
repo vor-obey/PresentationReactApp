@@ -1,0 +1,54 @@
+@import "src/variables"
+@import "src/mixins"
+@import "src/size-screen"
+@import "src/media-queries"
+
+
+.partners
+  position: relative
+  padding: 100px 0 200px 0
+  overflow-x: hidden
+
+.map
+  right: -150px
+  top: 150px
+  position: absolute
+  z-index: -1
+
+.partners-info
+  max-width: 470px
+
+  h2
+    font-size: 42px
+    margin-bottom: 80px
+
+  p
+    @include mainFonts(20px, $paragraphColor)
+    margin-bottom: 65px
+
+.partners-text
+  font-weight: 700
+  font-size: 12px !important
+  margin-bottom: 40px !important
+
+.partners-links
+  display: flex
+
+  a + a
+    margin-left: 15px
+
+//----------------------Media query max-width 680px----------------------
+
+@include max-screen($middle)
+  .partners
+    padding: 30px 0 100px 0
+  .partners-info
+    h2
+     margin-bottom: 40px
+
+    p
+     @include mainFonts(22px, $paragraphColor)
+     margin-bottom: 65px
+
+  .partners-text
+    color: $blue !important

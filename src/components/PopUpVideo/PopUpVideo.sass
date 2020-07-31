@@ -1,0 +1,79 @@
+@import "src/mixins"
+@import "src/variables"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.popup-container
+  display: none
+  @include flexBox(null,center,center)
+  height: 100%
+  width: 100%
+  position: fixed
+  z-index: 20
+  top: 0
+  background: rgba(0, 0, 0, 0.5)
+
+.unvisible
+  display: none
+
+.popup-video
+  width: 800px
+  height: 430px
+  background: $white
+  border-radius: 10px
+  padding: 100px
+  position: relative
+
+.popup-buttons
+  position: absolute
+  bottom: 20px
+  right: 100px
+  transition: .3s
+
+.popup-btn
+  margin-left: 20px
+  border: 1px solid $blue
+  background: $white
+  border-radius: 8px
+  padding: 10px 25px
+  outline: none
+  cursor: pointer
+  transition: .3s
+  a
+    text-decoration: none
+    color: $blue
+
+.button-closed
+  border: 1px solid red
+  a
+    color: red
+  &:hover
+    transform: scale(1.1)
+    box-shadow: 0 0 10px rgba(red, .5)
+
+.button-open:hover
+  transform: scale(1.1)
+  box-shadow: 0 0 10px rgba($blue, .5)
+
+//------------------Media max-width 1023px-----------------
+
+@include max-screen($md)
+  .popup-video
+    width: 600px
+    height: 370px
+    padding: 60px 80px 100px 80px
+
+
+//------------------Media max-width 680-----------------
+
+@include max-screen($middle)
+  .popup-video
+    width: 600px
+    height: 370px
+    padding: 0 10px
+    background: none
+
+  .popup-buttons
+    bottom: -50px
+    right: 10px
+    transition: .3s

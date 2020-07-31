@@ -1,0 +1,41 @@
+@import "./src/mixins"
+@import "./src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.interface-box
+  display: none
+
+@include max-screen($sm)
+  .interface-box
+    display: block
+    padding: 0 10px
+
+    .interface-images
+      justify-content: center
+      display: flex
+      flex-wrap: wrap
+      width: 100%
+
+    .interface-image
+      margin-right: 10px
+      margin-bottom: 10px
+      box-shadow: 0 5px 10px rgba(0, 0, 0, .5)
+      transition: .3s
+
+    .interface-image:nth-child(2)
+      margin-right: 0
+
+    .interface-image:nth-child(4)
+      margin-right: 0
+
+    .interface-image:hover
+      transform: scale(1.02)
+      box-shadow: 0 5px 15px rgba(0, 0, 0, .7)
+
+    .interface-image
+      width: 45%
+  
+      >img
+        width: 100%
+

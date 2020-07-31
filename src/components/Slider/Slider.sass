@@ -1,0 +1,79 @@
+@import "./src/mixins"
+@import "./src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.slider-wrapper
+  -moz-user-select: none
+  user-select: none
+  padding-bottom: 170px
+
+.slides
+  display: grid
+  grid-template-rows: 1fr
+  grid-template-columns: repeat(5, 1fr)
+  position: relative
+  padding-left: 2%
+
+  > img
+    width: 90%
+    box-shadow: 0 5px 15px darkslategrey
+    transition: .2s
+
+    &:hover
+      box-shadow: 0 5px 20px darkslategrey
+
+.phone-over
+  position: absolute
+  height: 136%
+  width: auto
+  left: 50%
+  top: -50%
+  transform: translate(-49%, 25%)
+
+  > img
+    height: 100%
+    width: auto
+
+.slider
+  position: relative
+
+.move-left, .move-right
+  position: absolute
+  top: 45%
+  z-index: 99
+  font-size: 30px
+  animation: scale-arrow 3s linear infinite
+  cursor: pointer
+
+//--------------------------Slider buttons------------------
+
+.move-right
+  right: 10px
+
+.move-left
+  left: 10px
+
+//------------------------Buttons animation--------------------
+
+@keyframes scale-arrow
+  0%
+    transform: scale(1)
+  60%
+    transform: scale(1.3)
+  90%
+    transform: scale(1.1)
+  100%
+    transform: scale(1)
+
+//------------------Media max-width 1023px-----------------
+
+@include max-screen($md)
+  .slider-wrapper
+    padding-bottom: 60px
+
+//------------------Media max-width 767px-----------------
+
+@include max-screen($sm)
+  .slider-wrapper
+    display: none

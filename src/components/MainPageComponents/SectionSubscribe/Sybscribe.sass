@@ -1,0 +1,16 @@
+@import "src/variables"
+@import "src/mixins"
+
+.subscribe-form-wrapper
+  @include flexBox(null, center, null)
+  padding-bottom: 50px
+  border-bottom: 2px solid #f4f4f4
+
+
+.subscribe-form
+  width: 100%
+  padding-top: 50px
+  text-align: center
+
+  p
+    @include mainFonts(14px, $paragraphColor)

@@ -1,0 +1,14 @@
+@mixin mainFonts($font-size, $color)
+  color: $color
+  font-family: 'Lato', sans-serif
+  font-size: $font-size
+
+@mixin flexBox($flex-direction, $justify-content, $align-items)
+  display: flex
+  align-items: $align-items
+  flex-direction: $flex-direction
+  justify-content: $justify-content
+
+@mixin border($brd-color, $radius)
+  border: 1px solid $brd-color
+  border-radius: $radius

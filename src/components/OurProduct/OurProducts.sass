@@ -1,0 +1,61 @@
+@import "src/variables"
+@import "src/mixins"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.our-packages
+  margin-top: 50px
+  padding: 0 20px
+
+.about-products
+  @include flexBox(column, null, center)
+
+.product-list
+  @include flexBox(null, null, center)
+  &:first-child
+    padding-bottom: 50px
+    border-bottom: 2px solid #f4f4f4
+
+  &:last-child
+    margin-top: 50px
+    margin-bottom: 50px
+
+
+//-----------------Media max-width 1023px------------------------
+
+@include max-screen($md)
+  .about-products
+    @include flexBox(row, null, null)
+
+  .product-list
+    @include flexBox(column, null, null)
+    &:first-child
+      padding-bottom: 0
+
+    &:last-child
+      margin-top: 0
+      margin-bottom: 0
+
+  .product-list + .product-list
+    margin-left: 20px
+
+//-----------------Media max-width 767px------------------------
+
+@include max-screen($sm)
+  .our-packages
+    margin-top: 20px
+
+  .about-products
+    @include flexBox(column, null, null)
+
+  .product-list
+    @include flexBox(column, null, null)
+    &:first-child
+      padding-bottom: 30px
+
+    &:last-child
+      margin-top: 50px
+      margin-bottom: 40px
+
+  .product-list + .product-list
+    margin-left: 0

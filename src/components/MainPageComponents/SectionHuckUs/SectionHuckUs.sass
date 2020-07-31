@@ -1,0 +1,63 @@
+@import "src/variables"
+@import "src/mixins"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.huck-us
+  background-image: url('../../../images/iphone-feature.png')
+  background-size: 750px
+  background-position: -80px 100px
+  background-repeat: no-repeat
+  padding: 150px 0 150px 0
+
+.huck-us-wrapper
+  @include flexBox(null, flex-end, null)
+
+.huck-us-text
+  max-width: 500px
+
+  h2
+    font-size: 42px
+    margin-bottom: 80px
+
+  p
+    @include mainFonts(20px, $paragraphColor)
+    margin-bottom: 75px
+
+.buttons-container
+  display: flex
+  justify-content: space-between
+  padding-right: 80px
+
+.show-more-btn
+  @include border(#e9e9ea, $r70)
+  background: #fff
+  padding: 15px 20px
+  margin-left: 20px
+  font-family: 'Lato', sans-serif
+  outline: none
+  cursor: pointer
+
+//----------------------Media query max-width 680px----------------------
+
+@include max-screen($middle)
+  .huck-us-wrapper
+    @include flexBox(null, flex-start, null)
+
+  .huck-us
+    padding: 50px 0 100px 0
+
+  .huck-us-text
+    h2
+      margin-bottom: 40px
+
+    p
+      @include mainFonts(22px, $paragraphColor)
+      margin-bottom: 75px
+
+//------------------Media max-width 500px---------------------------------
+@include max-screen(500px)
+  .buttons-container
+    height: 130px
+    flex-direction: column
+    padding-right: 0

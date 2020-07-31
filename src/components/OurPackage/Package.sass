@@ -1,0 +1,77 @@
+@import "src/variables"
+@import "src/mixins"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.package
+  @include flexBox(column, center, center)
+  max-height: 625px
+  min-width: 320px
+  padding-top: 20px
+  padding-bottom: 40px
+  border-radius: 10px
+  background: #e9e9eb
+  margin-left: 10px
+  transition: all .3s ease-in
+
+  > h3
+    font-weight: 300
+    font-size: 32px
+    margin-bottom: 20px
+
+  > span
+    @include mainFonts(11px, #000)
+    font-weight: 700
+    margin-bottom: 45px
+    border: 1px solid #8c8f94
+    padding: 5px 20px
+    border-radius: 70px
+
+  > p
+    @include mainFonts(20px, #8c8f94)
+    margin-bottom: 50px
+
+  > ul
+    @include flexBox(column, null, center)
+    margin-bottom: 70px
+    padding: 0
+
+    > .item-box
+      display: flex
+      margin-bottom: 25px
+
+      .item-box__item
+        list-style: none
+
+      > .fa-check
+        margin-right: 10px
+        color: #6fc754
+
+.package-hover
+  transform: scale(1.05)
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3)
+  background: #fff
+
+//------------------Media max-width 1023px---------------
+
+@include max-screen($md)
+  .package
+    width: 100%
+    padding-top: 0
+    margin-left: 0
+    transition: all .3s ease-in
+
+//------------------Media max-width 767px---------------
+
+@include max-screen($sm)
+  .package
+    width: 100%
+    padding-top: 0
+    margin-left: 0
+    transition: all .3s ease-in
+
+//------------------Media max-width 767px---------------
+
+@include max-screen($xs)
+  .package-hover
+    transform: scale(1)

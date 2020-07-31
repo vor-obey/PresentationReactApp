@@ -1,0 +1,78 @@
+@import "src/variables"
+@import "src/mixins"
+
+//----------Style for button under slider-------------------
+.app-store-btn
+  @include flexBox(null, null, center)
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5)
+  color: $white
+  background: $black
+  padding: 15px 45px 15px 30px
+  border-radius: $r70
+  margin-top: 10px
+  border: 1px solid #000
+  cursor: pointer
+  transition: color, background .3s
+  user-select: none
+
+  .fa-apple
+    font-size: 30px
+
+  > span
+    @include mainFonts(22px, null)
+    margin-left: 20px
+    position: relative
+    top: 5px
+
+    &:before
+      position: absolute
+      top: -10px
+      left: 2px
+      font-size: 11px
+      content: 'Download on the'
+
+.app-store-btn:active
+  transform: scale(1.01)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6)
+
+.app-store-btn:hover
+  background: #fff
+  color: #000
+  border: 1px solid #000
+
+//----------Style for button in footer-------------------
+
+.footer-app-store-btn
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5)
+  color: #fff
+  background: $black
+  padding: 10px 20px 10px 10px
+  border-radius: 10px
+  display: inline-block
+  position: relative
+  margin: 10px 0 40px 0
+  cursor: pointer
+  transition: color, background .3s
+  user-select: none
+
+  span
+    margin-left: 10px
+    position: relative
+
+    &:before
+      position: absolute
+      top: -8px
+      left: 2px
+      font-size: 8px
+      content: 'Download on the'
+
+  .fa-apple
+    font-size: 22px
+
+.footer-app-store-btn:active
+  transform: scale(1.01)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6)
+
+.footer-app-store-btn:hover
+  background: #fff
+  color: #000

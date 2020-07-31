@@ -1,0 +1,101 @@
+@import "./src/mixins"
+@import "./src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.footer
+  @include flexBox(null,space-between, flex-start)
+  padding: 70px 0 20px 0
+  border-bottom: 2px solid #f4f4f4
+  margin-bottom: 30px
+
+  .social-block
+    min-width: 270px
+    max-width: 280px
+    margin-right: 30px
+
+    >img
+      margin-bottom: 15px
+
+    >p
+      @include mainFonts(14px, $grey)
+      margin-bottom: 30px
+
+.footer-links-container
+  display: flex
+  margin-right: 20px
+  flex-wrap: wrap
+
+//-----------------------------------------Hover effect for link------------------------
+
+.social-icons
+  a+a
+    margin-left: 25px
+
+  a
+    color: #bdbec0
+    font-size: 18px
+
+    &:hover
+      color: $blue
+
+    &:hover .rotate
+      transform: rotateY(720deg)
+      transition: 1s ease-in
+
+//----------------------------Animation for icons-------------------------
+
+.rotate
+  transition: 1s ease-in
+
+//------------------Media max-width 680px-----------------
+
+@include max-screen($sm)
+  .footer
+    @include flexBox(column,null, null)
+    padding: 50px 0 20px 0
+
+    .social-block
+      @include flexBox(column, center, center)
+      min-width: 0
+      max-width: 100%
+      margin-right: 0
+
+      >p
+        text-align: center
+        @include mainFonts(18px, $grey)
+        padding: 0 15px
+
+  .footer-links-container
+    margin: 50px 0 0 0
+    width: 100%
+    justify-content: space-between
+
+  .social-icons
+    @include flexBox(null, space-between, null)
+    width: 100%
+
+    a+a
+      margin-left: 0
+
+    a
+      font-size: 30px
+
+//------------------Media max-width 413px-----------------
+
+@include max-screen($middle)
+  .footer-links-container
+    margin-right: 0
+
+  .social-icons
+    a
+      color: $blue
+
+
+
+
+
+
+
+
+

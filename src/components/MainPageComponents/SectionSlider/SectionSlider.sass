@@ -1,0 +1,61 @@
+@import "./src/mixins"
+@import "./src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.interface-info
+  @include flexBox(column, null, center)
+  background: $backGround
+  padding: 140px 0 100px 0
+
+  > h2
+    padding-bottom: 40px
+
+  > span
+    display: block
+    width: 50px
+    height: 2px
+    background: #267df4
+    margin-bottom: 40px
+
+  p
+    @include mainFonts(12px, $paragraphColor)
+    text-transform: uppercase
+    font-weight: 700
+    letter-spacing: 1px
+    margin-bottom: 150px
+
+.interface-info-form
+  @include flexBox(column, null, center)
+  width: 100%
+  padding-top: 50px
+
+  > p
+    text-transform: uppercase
+    margin-bottom: 5px
+
+  > h2
+    margin-bottom: 40px
+
+//------------------Media max-width 1023px-----------------
+
+@include max-screen($md)
+  .interface-info
+    padding: 40px 0 100px 0
+
+    > h2
+      padding-bottom: 20px
+
+    > p
+      margin-bottom: 90px
+
+
+//------------------Media max-width 680px-----------------
+
+@include max-screen($middle)
+  .interface-info
+    padding: 40px 0 60px 0
+    text-align: center
+
+  > h2
+    padding-bottom: 40px

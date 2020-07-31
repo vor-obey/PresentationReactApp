@@ -1,0 +1,42 @@
+@import 'src/mixins'
+@import "src/variables"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.slider-container
+  height: 100%
+  width: 100%
+  margin-top: 100px
+
+.carousel
+  @include flexBox(null, center, null)
+  width: 100%
+  height: 100%
+  position: relative
+  overflow: hidden
+  padding-top: 20px
+
+  .slider
+    display: flex
+    height: 100%
+    width: 300%
+    flex-shrink: 0
+    transition: all .5s ease-in-out
+
+.arrow
+  @include mainFonts(60px, $grey)
+  position: absolute
+  top: 65px
+  cursor: pointer
+
+.arrow.left
+  left: 5%
+
+.arrow.right
+  right: 5%
+
+//-------------Media max-width 413px------------------
+
+@include max-screen($xs)
+  .slider-container
+    margin-top: 40px

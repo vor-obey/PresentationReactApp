@@ -1,0 +1,69 @@
+@import "./src/mixins"
+@import "./src/variables"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.footer-links:first-child
+  margin-left: 0
+
+.footer-links
+  margin-left: 60px
+
+  > h3
+    @include mainFonts(14px, $titleColor)
+    margin-top: 0
+
+  > ul
+    @include flexBox(column, null, null)
+    padding: 0
+
+    > li
+      margin-bottom: 15px
+      transition: .5s
+      opacity: .6
+      list-style: none
+
+      &:hover
+        transform: translateX(-5px)
+        opacity: 1
+
+      > a
+        @include mainFonts(null, $grey)
+        text-decoration: none
+
+//------------------Media max-width 680px-----------------
+
+@include max-screen($md)
+  .footer-links
+    margin-left: 30px
+
+    > h3
+      @include mainFonts(12px, $titleColor)
+
+    > ul
+      > li
+        margin-bottom: 10px
+
+        > a
+          @include mainFonts(12px, $grey)
+          text-decoration: none
+
+//------------------Media max-width 413px-----------------
+
+@include max-screen($xs)
+  .footer-links:first-child
+    margin-right: 15px
+
+  .footer-links
+    margin-left: 0
+
+    > h3
+        @include mainFonts(18px, $titleColor)
+
+    > ul
+      > li
+        margin-bottom: 10px
+
+        > a
+            @include mainFonts(18px, $grey)
+            text-decoration: none

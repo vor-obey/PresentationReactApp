@@ -1,0 +1,37 @@
+@import "src/variables"
+@import "src/mixins"
+@import "src/size-screen"
+@import "src/media-queries"
+
+.text-wrapper
+  @include flexBox(null, space-between, null)
+  border-bottom: 2px solid #f4f4f4
+  padding: 120px 20px
+
+.text-column
+  width: 45%
+
+  h3
+    @include mainFonts(26px,null)
+    font-weight: 300
+
+  p
+    @include mainFonts(18px,$paragraphColor)
+
+//----------------------Media query max-width 680px----------------------
+
+@include max-screen($middle)
+  .text-wrapper
+    @include flexBox(column, null, null)
+    padding: 20px
+
+    .text-column
+      width: 100%
+      margin-bottom: 20px
+
+    h3
+      @include mainFonts(26px,null)
+      font-weight: 400
+
+    p
+      @include mainFonts(22px,$paragraphColor)

@@ -1,0 +1,31 @@
+@import "src/mixins"
+@import "src/variables"
+
+.header
+  width: 100%
+  position: relative
+  z-index: 10
+  background: rgba(darkslategrey, 0.1)
+  box-shadow: 0 0 15px rgba(darkslategrey, 0.6)
+
+.container
+  max-width: 1170px
+  margin: 0 auto
+  padding: 0 20px
+
+  .header-top
+    @include flexBox(null,space-between,center)
+    height: 70px
+    width: 100%
+
+    .main-logo
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+
+    .container-1
+      @include flexBox(null, null, center)
+      width: 100%
+
+
+

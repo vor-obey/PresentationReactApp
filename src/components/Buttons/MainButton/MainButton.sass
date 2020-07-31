@@ -1,0 +1,39 @@
+@import "src/mixins"
+@import "src/variables"
+@import "src/media-queries"
+@import "src/size-screen"
+
+.package-section-btn
+  @include mainFonts(16px, $white)
+  background: $blue
+  padding: 15px 40px
+  outline: none
+  border: none
+  border-radius: $r70
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+  cursor: pointer
+  opacity: .8
+  transition: opacity .3s
+  user-select: none
+  margin-bottom: 0
+
+  &:hover
+    opacity: 1
+
+  &:active
+    transform: scale(1.01)
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+
+  .fa-apple
+    margin-right: 10px
+    font-size: 20px
+
+  .fa-arrow-right
+    margin-left: 20px
+    font-size: 16px
+
+//----------------Media max-width 1023px----------------
+
+@include max-screen($md)
+  .package-section-btn
+    display: none
