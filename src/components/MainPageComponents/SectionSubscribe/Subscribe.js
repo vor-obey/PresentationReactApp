@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './Sybscribe.sass';
-import {InputText} from "../../InputText/InputText";
+import InputText from "../../InputText/InputText";
 
 export class Subscribe extends Component {
   render() {

@@ -16,4 +16,5 @@ export const arrayItem_2 = ['Unlimited events', 'Connect Dropbox & Evernote'];
 
 
 
-export const arrowIcon = <i className="fas fa-arrow-right"></i>;
+export const arrowIcon = <i className="fas fa-arrow-right"/>;
+

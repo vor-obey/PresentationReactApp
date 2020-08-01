@@ -9,14 +9,12 @@ import {OurProducts} from "../components/OurProduct/OurProducts";
 function Router() {
   return (
     <BrowserRouter>
-
       <HeaderMain/>
       <Switch>
         <Route exact path="/" component={Main}/>
         <Route exact path="/package" component={OurProducts}/>
       </Switch>
       <Route exact path="/" component={Footer}/>
-
     </BrowserRouter>
   );
 }

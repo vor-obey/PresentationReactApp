@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './SectionSlider.sass';
 import {Slider} from "../../Slider/Slider";
-import {InputText} from "../../InputText/InputText";
+import InputText from "../../InputText/InputText";
 import {ButtonAppStore} from "../../Buttons/ButtonsAppStore/ButtonAppStore";
 import {InterfacePresentation} from "./InterfacePresentation/InterfacePresentation";
 

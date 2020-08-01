@@ -17,7 +17,7 @@ export class Main extends Component {
     })
   }
 
-  handleStateVisiblePopup = (props) => {
+  handleStateVisiblePopup = () => {
     this.setState({
       popupVisible: !this.state.popupVisible,
     })
@@ -56,7 +56,7 @@ export class Main extends Component {
         <ChoosePlan/>
 
         <Subscribe/>
-        
+
       </Fragment>
     );
   }
