@@ -1,17 +1,17 @@
 import React, {Component} from "react";
-import './Slider.sass';
-import screenimg_1 from '../../images/interface/img-1.png';
-import screenimg_2 from '../../images/interface/img-2.png';
-import screenimg_3 from '../../images/interface/img-6.png';
-import screenimg_4 from '../../images/interface/img-3.png';
-import screenimg_5 from '../../images/interface/img-4.png';
-import PhoneImg from '../../images/interface/Phone.png';
+import "./Slider.sass";
+import screenimg_1 from "../../images/interface/img-1.png";
+import screenimg_2 from "../../images/interface/img-2.png";
+import screenimg_3 from "../../images/interface/img-6.png";
+import screenimg_4 from "../../images/interface/img-3.png";
+import screenimg_5 from "../../images/interface/img-4.png";
+import PhoneImg from "../../images/interface/Phone.png";
 
 export class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-      sliderOpacity: 'opacity',
+      sliderOpacity: "opacity",
       flag: false,
       arrayImg: [screenimg_1, screenimg_2, screenimg_3, screenimg_4, screenimg_5],
     });
@@ -41,12 +41,12 @@ export class Slider extends Component {
   render() {
     const {arrayImg} = this.state;
     return (
-      <div className='slider-wrapper'>
+      <div className="slider-wrapper">
 
         <div className="slider">
 
-          <div className='move-left' onClick={this.scrollScreenLeft}><i className="fas fa-arrow-circle-left"/></div>
-          <div className='move-right' onClick={this.scrollScreenRight}><i className="fas fa-arrow-circle-right"/>
+          <div className="move-left" onClick={this.scrollScreenLeft}><i className="fas fa-arrow-circle-left"/></div>
+          <div className="move-right" onClick={this.scrollScreenRight}><i className="fas fa-arrow-circle-right"/>
           </div>
 
           <div className="slides">
@@ -64,6 +64,7 @@ export class Slider extends Component {
               }
             )
             }
+
           </div>
 
         </div>

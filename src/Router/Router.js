@@ -5,6 +5,7 @@ import {HeaderMain} from "../components/HeaderMain/HeaderMain";
 import {Main} from "../pages/Main/Main";
 import {Footer} from "../components/Footer/Footer";
 import {OurProducts} from "../components/OurProduct/OurProducts";
+import AlertDialogSlide from "../components/Menu/MenuItemModal/MenuItemModal";
 
 function Router() {
   return (
@@ -15,6 +16,7 @@ function Router() {
         <Route exact path="/package" component={OurProducts}/>
       </Switch>
       <Route exact path="/" component={Footer}/>
+      <AlertDialogSlide/>
     </BrowserRouter>
   );
 }

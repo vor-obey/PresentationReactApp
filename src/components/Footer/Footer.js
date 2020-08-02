@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import './Footer.sass';
-import footerLogoType from '../../images/logo.png'
+import "./Footer.sass";
+import footerLogoType from "../../images/logo.png"
 import {FooterLinks} from "./FooterLinks/FooterLinks";
 import {footerLinksAboutUs, footerLinksLearnMore, footerLinksSupport} from "../../constants";
 import {ButtonAppStore} from "../Buttons/ButtonsAppStore/ButtonAppStore";
@@ -16,7 +16,8 @@ export class Footer extends Component {
             <p>It was some time before he obtained any answer, and the reply, when made, was unpropitious.</p>
 
             <ButtonAppStore
-            btnClassName="footer-app-store-btn"
+              path="/"
+              btnClassName="footer-app-store-btn"
             />
 
             <div className="social-icons">
@@ -33,17 +34,17 @@ export class Footer extends Component {
           <div className="footer-links-container">
 
             <FooterLinks
-              title='LEARN MORE'
+              title="LEARN MORE"
               links={footerLinksLearnMore}
             />
 
             <FooterLinks
-              title='ABOUT US'
+              title="ABOUT US"
               links={footerLinksAboutUs}
             />
 
             <FooterLinks
-              title='SUPPORT'
+              title="SUPPORT"
               links={footerLinksSupport}
             />
 

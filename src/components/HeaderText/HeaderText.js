@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import './HeaderText.sass';
-import PhoneImg from '../../images/header_iphone.png'
+import "./HeaderText.sass";
+import PhoneImg from "../../images/header_iphone.png"
 
 export class HeaderText extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ export class HeaderText extends Component {
 
   render() {
     return (
-      <div className='header-text'>
+      <div className="header-text">
 
         <h1>What happens tomorrow?</h1>
 
@@ -22,12 +22,12 @@ export class HeaderText extends Component {
           feel quite convivial.
         </p>
 
-        <button ref={this.btnVideo} className='watch-video-btn' onClick={this.props.handleStateVisiblePopup}>
+        <button ref={this.btnVideo} className="watch-video-btn" onClick={this.props.handleStateVisiblePopup}>
           <i className="fas fa-play"/>
           <span>Watch Video</span>
         </button>
 
-        <img className='iPhone-image' src={PhoneImg} alt=""/>
+        <img className="iPhone-image" src={PhoneImg} alt=""/>
 
       </div>
     );

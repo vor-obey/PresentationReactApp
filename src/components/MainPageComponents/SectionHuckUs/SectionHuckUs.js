@@ -1,11 +1,11 @@
 import React, {Component} from "react";
-import './SectionHuckUs.sass';
+import "./SectionHuckUs.sass";
 import {MainButton} from "../../Buttons/MainButton/MainButton";
 
 export class SectionHuckUs extends Component {
   render() {
     return (
-      <section className='huck-us'>
+      <section className="huck-us">
         <div className="container">
           <div className="huck-us-wrapper">
             <div className="huck-us-text">
@@ -22,7 +22,7 @@ export class SectionHuckUs extends Component {
                 old ones, and the birds have deserted them a long while.
               </p>
 
-              <div className='buttons-container'>
+              <div className="buttons-container">
                 <MainButton
                   btnName="Try to huck"
                   iconAfter={<i className="fas fa-arrow-right"/>}

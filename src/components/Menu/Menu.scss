@@ -26,8 +26,12 @@
   }
 }
 
-.menu-right,.menu-left{
+.menu-right, .menu-left {
   display: flex;
+}
+
+.menu-right {
+  margin-right: 20px;
 }
 
 .menu-link {

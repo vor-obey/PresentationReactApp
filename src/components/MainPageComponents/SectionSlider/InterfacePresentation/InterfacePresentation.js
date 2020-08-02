@@ -1,9 +1,9 @@
 import React from "react";
-import './InterfacePresentation.sass';
-import photo_1 from '../../../../images/interface/img-1.png';
-import photo_2 from '../../../../images/interface/img-2.png';
-import photo_3 from '../../../../images/interface/img-3.png';
-import photo_4 from '../../../../images/interface/img-4.png';
+import "./InterfacePresentation.sass";
+import photo_1 from "../../../../images/interface/img-1.png";
+import photo_2 from "../../../../images/interface/img-2.png";
+import photo_3 from "../../../../images/interface/img-3.png";
+import photo_4 from "../../../../images/interface/img-4.png";
 
 export const InterfacePresentation = () => {
   return (

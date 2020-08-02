@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import './SectionSlider.sass';
+import "./SectionSlider.sass";
 import {Slider} from "../../Slider/Slider";
 import InputText from "../../InputText/InputText";
 import {ButtonAppStore} from "../../Buttons/ButtonsAppStore/ButtonAppStore";
@@ -8,7 +8,7 @@ import {InterfacePresentation} from "./InterfacePresentation/InterfacePresentati
 export class SectionSlider extends Component {
   render() {
     return (
-      <div className='interface-info'>
+      <div className="interface-info">
 
         <h2>Beautiful interface</h2>
         <span/>
@@ -21,14 +21,15 @@ export class SectionSlider extends Component {
           <p>new providence</p>
 
           <InputText
-            title='Get it to your smartphone'
-            placeholder='Enter your email...'
-            btnName='Set Invite'
+            title="Get it to your smartphone"
+            placeholder="Enter your email..."
+            btnName="Set Invite"
           />
 
           <p>or download from</p>
+
           <ButtonAppStore
-          btnClassName='app-store-btn'
+            btnClassName="app-store-btn"
           />
 
         </div>

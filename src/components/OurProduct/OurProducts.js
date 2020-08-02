@@ -27,17 +27,16 @@ export class OurProducts extends Component {
             <div className="product-list">
               <Package
                 activeClass= "package"
-                title='Pro'
-                price='$4.99'
-                subtitle='Make your life better'
-                btnName='Make me a Pro'
+                title="Pro"
+                price="$4.99"
+                subtitle="Make your life better"
+                btnName="Make me a Pro"
                 arrayItem_1={arrayItem_2}
               />
               <Product
                 title="Pro package"
               />
             </div>
-
 
           </div>
       </div>

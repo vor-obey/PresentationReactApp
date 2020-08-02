@@ -7,10 +7,10 @@
   @include flexBox(column, center, center)
   margin-bottom: 40px
   width: 100%
-  >h2
+
+  > h2
     text-align: center
     margin-bottom: 40px
-
 
 .subscribe-info-input
   position: relative
@@ -18,9 +18,9 @@
   min-width: 600px
 
   > input
-    box-sizing: border-box
     @include border(#d4d4d5, $r70)
     @include mainFonts(16px, $grey)
+    box-sizing: border-box
     outline: none
     width: 100%
     padding: 15px 15px 15px 15px
@@ -29,7 +29,6 @@
   > button
     @include mainFonts(16px, $white)
     position: absolute
-    //right: 7px
     right: 3px
     top: 3px
     outline: none

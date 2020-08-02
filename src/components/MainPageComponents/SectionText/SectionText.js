@@ -1,11 +1,11 @@
 import React from "react";
-import './SectionText.sass';
-import Lock from '../../../images/Lock Icon.png';
-import Clock from '../../../images/Clock Icon.png';
+import "./SectionText.sass";
+import Lock from "../../../images/Lock Icon.png";
+import Clock from "../../../images/Clock Icon.png";
 
 export const SectionText = () => {
   return (
-    <div className='container text-wrapper'>
+    <div className="container text-wrapper">
 
       <div className="text-column">
         <img src={Lock} alt=""/>

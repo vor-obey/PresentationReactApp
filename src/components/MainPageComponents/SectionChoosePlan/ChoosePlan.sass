@@ -115,11 +115,13 @@
     font-weight: 700
 
 //----------------------Media query max-width 680px----------------------
+
 @include max-screen($middle)
   .package-container
-    @include flexBox(column,center,center)
+    @include flexBox(column, center, center)
 
 //----------------------Media query max-width 413px----------------------
+
 @include max-screen($xs)
   .checkbox-label
     @include border(#d5d6d7, $r70)

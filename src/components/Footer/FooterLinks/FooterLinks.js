@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import './FooterLinks.sass';
+import "./FooterLinks.sass";
 
 export class FooterLinks extends Component {
   render() {
     return (
-      <div className='footer-links'>
+      <div className="footer-links">
 
         <h3>{this.props.title}</h3>
 

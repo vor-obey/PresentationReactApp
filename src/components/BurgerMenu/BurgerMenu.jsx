@@ -1,24 +1,24 @@
 import React, {Component} from "react";
-import './BurgerMenu.sass';
+import "./BurgerMenu.sass";
 
 export class BurgerMenu extends Component {
   constructor(props) {
     super(props);
     this.handleVisibleMenu = this.handleVisibleMenu.bind(this);
-  }
+  };
 
   handleVisibleMenu() {
-    this.props.updateData(
+    this.props.handlerStateMenuVisible(
       !this.props.visibleMenu
     )
-  }
+  };
 
   render() {
 
     const {visibleMenu} = this.props;
 
     return (
-      <div className='burger-box' onClick={this.handleVisibleMenu}>
+      <div className="burger-box" onClick={this.handleVisibleMenu}>
 
         <div className={visibleMenu ? "row-burger-active row-top active-top" : "row-burger row-top"}/>
         <div className={visibleMenu ? "row-burger-active active-middle" : "row-burger"}/>

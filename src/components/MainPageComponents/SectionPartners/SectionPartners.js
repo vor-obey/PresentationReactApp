@@ -1,15 +1,15 @@
 import React, {Component} from "react";
-import './SectionPartners.sass';
-import DropboxImg from '../../../images/dropbox.png';
-import EvernoteImg from '../../../images/evernote.png';
-import MapImg from '../../../images/map.png';
+import "./SectionPartners.sass";
+import DropboxImg from "../../../images/dropbox.png";
+import EvernoteImg from "../../../images/evernote.png";
+import MapImg from "../../../images/map.png";
 
 export class SectionPartners extends Component {
   render() {
     return (
-      <section className='partners'>
+      <section className="partners">
 
-        <img className='map' src={MapImg} alt=""/>
+        <img className="map" src={MapImg} alt=""/>
 
         <div className="container">
           <div className="partners-info">
@@ -25,7 +25,7 @@ export class SectionPartners extends Component {
               to yourself, and to the trust I reposed in you.
             </p>
 
-            <p className='partners-text'>PARTNERS</p>
+            <p className="partners-text">PARTNERS</p>
 
             <div className="partners-links">
               <a href="#"><img src={DropboxImg} alt=""/></a>

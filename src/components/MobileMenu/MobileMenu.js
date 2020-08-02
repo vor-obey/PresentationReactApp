@@ -11,11 +11,11 @@ export class MobileMenu extends Component {
       <div className={this.props.visibleMenu ? "menu-mobile" : " menu-mobile menu-mobile__close"} >
 
         <ul className="menu-nav-mob">
-          <Link to="/package"><li><a href="#">{item[0]}</a></li></Link>
-          <li><a href="#">{item[1]}</a></li>
-          <li><a href="#">{item[2]}</a></li>
-          <li><a href="#">{item[3]}</a></li>
-          <li><a href="#">{item[4]}</a></li>
+          <Link to="/package"><li>{item[0]}</li></Link>
+          <Link to="/"><li>{item[1]}</li></Link>
+          <Link to="/"><li>{item[2]}</li></Link>
+          <Link to="/"><li>{item[3]}</li></Link>
+          <Link to="/"><li>{item[4]}</li></Link>
         </ul>
 
         <div className="mobile-btn">
@@ -25,7 +25,6 @@ export class MobileMenu extends Component {
             btnName="Get App"
           />
         </div>
-
 
       </div>
     )

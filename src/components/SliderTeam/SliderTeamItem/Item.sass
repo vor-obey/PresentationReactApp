@@ -23,11 +23,13 @@
   flex-direction: column
   justify-content: center
   align-items: center
+
   > h3
     @include mainFonts(32px, $black)
     margin-top: 80px
     margin-bottom: 20px
     font-weight: 300
+
   > p
     width: 70%
     font-family: 'Lato', sans-serif
@@ -37,7 +39,6 @@
 
 .star-icons
   margin-bottom: 20px
-
 
 .person-name
   @include mainFonts(16px, $black)
@@ -51,14 +52,12 @@
 
 @include max-screen($xs)
   .section-slider__text
-    >h3
+    > h3
       @include mainFonts(30px, $black)
 
-    >p
+    > p
       width: 95%
       font-size: 22px
 
   .person-name
     margin-bottom: 40px
-
-

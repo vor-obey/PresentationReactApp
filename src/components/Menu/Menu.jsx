@@ -1,27 +1,44 @@
 import React, {Component} from "react";
-import './Menu.scss';
+import "./Menu.scss";
 import {Link} from "react-router-dom";
+import AlertDialogSlide from "./MenuItemModal/MenuItemModal";
+import Button from "@material-ui/core/Button";
 
 export class Menu extends Component {
   render() {
     const {classNameUl, item, classNameLink} = this.props;
     return (
-      <ul className={classNameUl}>
-
-        <div className="menu-right">
-          <Link to='/package'>
-            <li><a className={classNameLink}>{item[0]}</a></li>
-          </Link>
-          <li><a className={classNameLink}>{item[1]}</a></li>
-          <li><a className={classNameLink}>{item[2]}</a></li>
-        </div>
+      <div className={classNameUl}>
 
         <div className="menu-left">
-          <li><a className={classNameLink}>{item[3]}</a></li>
-          <li><a className={classNameLink}>{item[4]}</a></li>
+          <Link to="/package">
+            <div className={classNameLink}>
+
+              <Button variant="text" color="primary">{item[0]}</Button>
+
+            </div>
+          </Link>
+
+          <Link to="#">
+            <AlertDialogSlide linkName={item[1]} className={classNameLink}/>
+          </Link>
+
+          <Link to="#">
+            <AlertDialogSlide linkName={item[2]} className={classNameLink}/>
+          </Link>
         </div>
 
-      </ul>
+        <div className="menu-right">
+          <Link to="#">
+            <AlertDialogSlide linkName={item[3]} className={classNameLink}/>
+          </Link>
+
+          <Link to="#">
+            <AlertDialogSlide linkName={item[4]} className={classNameLink}/>
+          </Link>
+        </div>
+
+      </div>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {connect} from 'react-redux'
-import './InputText.sass';
+import {connect} from "react-redux"
+import "./InputText.sass";
 import {fetchEmail} from "../../redux/actions";
 
 class InputText extends Component {
@@ -17,12 +17,11 @@ class InputText extends Component {
     const {email} = this.state;
 
     if(!email.trim()){
-      return
+      return alert("The input field must not be empty!")
     }
 
     const newEmail = {email, id: Date.now().toString()}
     this.props.fetchEmail(newEmail)
-    console.log(email)
     this.setState({email: ""})
   }
 
@@ -37,13 +36,13 @@ class InputText extends Component {
     const {title, placeholder, btnName} = this.props;
 
     return (
-      <div className='text-input__email'>
+      <div className="text-input__email">
         <h2>{title}</h2>
 
         <div className="subscribe-info-input">
           <input type="email" placeholder={placeholder} name="email" onChange={this.changeInputHandler} value={this.state.email}/>
 
-          <button onClick={this.submitHandler} type='submit'>
+          <button onClick={this.submitHandler} type="submit">
             {btnName}
           </button>
         </div>
