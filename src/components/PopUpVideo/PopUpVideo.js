@@ -15,6 +15,7 @@ export class PopUpVideo extends Component {
   };
 
   render() {
+    console.log(this.props.popupVisible)
 
     const {popupVisible} = this.props;
     const url = "https://www.youtube.com/watch?v=bxncT29xu_o&list=PLUfMME5TZ-ERIguY662fnZ8xtEABFUUZu&index=3";
@@ -49,7 +50,4 @@ export class PopUpVideo extends Component {
       </div>
     );
   }
-
 }
-
-// style={{opacity: this.props.popUpStyle.opacity, transition: this.props.popUpStyle.transition }}

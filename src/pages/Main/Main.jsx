@@ -25,7 +25,7 @@ class Main extends Component {
     this.setState({
       popupVisible: !this.state.popupVisible,
     })
-    console.log(this.state.popupVisible)
+
   }
 
   handleVisiblePopup = (value) => {
@@ -35,7 +35,9 @@ class Main extends Component {
   }
 
   render() {
-    const {loading, success, popupVisible, subscribeForNews} = this.props;
+    const {loading, success, subscribeForNews} = this.props;
+    const {popupVisible} = this.state;
+
     return (
       <Fragment>
         <Spinner
