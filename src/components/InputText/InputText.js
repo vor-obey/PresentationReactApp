@@ -1,64 +1,70 @@
 import React, {Component} from "react";
-import {connect} from "react-redux"
 import "./InputText.sass";
-import {fetchEmail} from "../../redux/actions";
 
 class InputText extends Component {
   constructor(props) {
     super(props);
     this.state = ({
-        email: ""
-      }
-    )
+      value: "",
+      error: false
+    })
   }
 
-  submitHandler = event => {
-    event.preventDefault()
-    const {email} = this.state;
+  onChangeHandler = e => {
+    this.setState({
+      value: e.target.value,
+    })
+  }
 
-    if(!email.trim()){
-      return alert("The input field must not be empty!")
+  onSubmit = e => {
+    const {value} = this.state;
+    const {onSubmit} = this.props;
+    if(value.length < 5){
+      this.setState({
+        error: true
+      })
+    } else {
+      if (typeof onSubmit !== "undefined") {
+        onSubmit(value);
+        this.setState({
+          value: "",
+          error: false
+        })
+      }
     }
 
-    const newEmail = {email, id: Date.now().toString()}
-    this.props.fetchEmail(newEmail)
-    this.setState({email: ""})
-  }
 
-  changeInputHandler = event => {
-    event.persist()
-    this.setState(prev => ({...prev, ...{
-      [event.target.name]: event.target.value
-      }}))
   }
 
   render() {
     const {title, placeholder, btnName} = this.props;
+    const {value, error}= this.state;
 
     return (
       <div className="text-input__email">
+
         <h2>{title}</h2>
 
         <div className="subscribe-info-input">
-          <input type="email" placeholder={placeholder} name="email" onChange={this.changeInputHandler} value={this.state.email}/>
+          
+          <input
+            type="email"
+            placeholder={placeholder}
+            name="email"
+            onChange={this.onChangeHandler}
+            value={value}/>
 
-          <button onClick={this.submitHandler} type="submit">
+          <button type="submit" onClick={this.onSubmit}>
             {btnName}
           </button>
+          {error && <span className="error-message">Min length email 5 symbols</span>}
+
+
         </div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = {
-  fetchEmail
-}
-
-// const mapStateToProps = state => {
-//   console.log(state)
-//   return state;
-// }
-
-export default connect(null, mapDispatchToProps)(InputText);
+export default InputText;
 

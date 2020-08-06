@@ -20,6 +20,7 @@ export class MobileMenu extends Component {
 
         <div className="mobile-btn">
           <MainButton
+            onLink="/"
             iconBefore={<i className="fab fa-apple"/>}
             style={{minWidth: 170+"px", color: "#267df4", background: "white", width: "100%", display: "inline-block"}}
             btnName="Get App"

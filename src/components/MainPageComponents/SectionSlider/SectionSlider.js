@@ -24,11 +24,13 @@ export class SectionSlider extends Component {
             title="Get it to your smartphone"
             placeholder="Enter your email..."
             btnName="Set Invite"
+            onSubmit={this.props.onSubmit}
           />
 
           <p>or download from</p>
 
           <ButtonAppStore
+            path="/"
             btnClassName="app-store-btn"
           />
 

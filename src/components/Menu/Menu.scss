@@ -1,6 +1,6 @@
-@import "src/mixins";
-@import "src/variables";
-@import "src/media-queries";
+@import "src/SassFiles/mixins";
+@import "src/SassFiles/variables";
+@import "src/SassFiles/mediaQueries/media-queries";
 
 .menu-nav {
   display: flex;

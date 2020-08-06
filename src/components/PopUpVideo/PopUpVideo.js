@@ -34,7 +34,7 @@ export class PopUpVideo extends Component {
 
           <div className="popup-buttons">
             <button className="popup-btn button-open ">
-              <a href="http://youtube.com" target="_blank">
+              <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
                 SHOW MORE
               </a>
             </button>

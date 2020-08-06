@@ -8,8 +8,12 @@ import {ChoosePlan} from "../../components/MainPageComponents/SectionChoosePlan/
 import {Subscribe} from "../../components/MainPageComponents/SectionSubscribe/Subscribe";
 import {HeaderText} from "../../components/HeaderText/HeaderText";
 import {PopUpVideo} from "../../components/PopUpVideo/PopUpVideo";
+import {Spinner} from "../../components/Spinner/Spinner";
+import {ModalView} from "../../components/ModalView/ModalView";
+import {connect} from "react-redux";
+import {subscribeForNews} from "../../store/user/userActions"
 
-export class Main extends Component {
+class Main extends Component {
   constructor(props) {
     super(props);
     this.state = ({
@@ -30,12 +34,23 @@ export class Main extends Component {
     })
   }
 
-
   render() {
+    const {loading, success, popupVisible, subscribeForNews} = this.props;
     return (
       <Fragment>
+        <Spinner
+          loading={loading}
+          success={success}
+        />
+
+        <ModalView
+          resultIcon={<i className="far fa-check-circle"/>}
+          resultText="Success"
+          success={success}
+        />
+
         <PopUpVideo
-          popupVisible={this.state.popupVisible}
+          popupVisible={popupVisible}
           onClick={this.handleVisiblePopup}
         />
 
@@ -49,15 +64,32 @@ export class Main extends Component {
 
         <SectionPartners/>
 
-        <SectionSlider/>
+        <SectionSlider onSubmit={subscribeForNews}/>
 
         <SliderTeam/>
 
         <ChoosePlan/>
 
-        <Subscribe/>
+        <Subscribe onSubmit={subscribeForNews}/>
 
       </Fragment>
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  const {loading, error, success} = state.userReducer;
+  return {
+    loading,
+    error,
+    success
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    subscribeForNews: email => dispatch(subscribeForNews(email)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

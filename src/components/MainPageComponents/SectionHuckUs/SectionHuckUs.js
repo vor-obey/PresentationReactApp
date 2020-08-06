@@ -24,12 +24,14 @@ export class SectionHuckUs extends Component {
 
               <div className="buttons-container">
                 <MainButton
+                  onLink="/"
                   btnName="Try to huck"
                   iconAfter={<i className="fas fa-arrow-right"/>}
                   style={{display: "inline-block"}}
                 />
 
                 <MainButton
+                  onLink="/"
                   style={{background: "white", color: "#000", padding: "15px 25px", display: "inline-block"}}
                   btnName="SHOW MORE"
                 />

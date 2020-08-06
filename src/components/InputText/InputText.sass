@@ -1,7 +1,7 @@
-@import 'src/mixins'
-@import "src/variables"
-@import "src/media-queries"
-@import "src/size-screen"
+@import 'src/SassFiles/mixins'
+@import "src/SassFiles/variables"
+@import "src/SassFiles/mediaQueries/media-queries"
+@import "src/SassFiles/mediaQueries/size-screen"
 
 .text-input__email
   @include flexBox(column, center, center)
@@ -41,6 +41,17 @@
     &:active
       transform: scale(1.01)
       box-shadow: 0 0 5px grey
+
+.error-message
+  margin-top: 7px
+  color: red
+  display: block
+  font-size: 12px
+  position: absolute
+  left: 20px
+
+//.error-message .error-active
+//  visibility: visible
 
 //---------------------Media max-width 767px-----------------
 

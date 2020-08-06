@@ -12,6 +12,7 @@ export class Subscribe extends Component {
             title="Subscribe our newsletters"
             placeholder="Your e-mail"
             btnName="Subscribe"
+            onSubmit={this.props.onSubmit}
           />
           <p>We promise to never spam you.</p>
 
