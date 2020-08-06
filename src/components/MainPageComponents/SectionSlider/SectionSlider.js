@@ -15,6 +15,7 @@ export class SectionSlider extends Component {
         <p>landing screen</p>
 
         <Slider/>
+
         <InterfacePresentation/>
 
         <div className="interface-info-form">
@@ -25,6 +26,8 @@ export class SectionSlider extends Component {
             placeholder="Enter your email..."
             btnName="Set Invite"
             onSubmit={this.props.onSubmit}
+            inputType="email"
+            inputName="email"
           />
 
           <p>or download from</p>

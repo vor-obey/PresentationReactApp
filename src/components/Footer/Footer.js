@@ -21,12 +21,12 @@ export class Footer extends Component {
             />
 
             <div className="social-icons">
-              <a href="#"><i className="fab rotate  fa-twitter"/></a>
-              <a href="#"><i className="fab rotate fa-facebook-f"/></a>
-              <a href="#"><i className="fab rotate fa-google-plus-g"/></a>
-              <a href="#"><i className="fab rotate fa-tumblr"/></a>
-              <a href="#"><i className="fab rotate fa-pinterest-p"/></a>
-              <a href="#"><i className="fab rotate fa-linkedin-in"/></a>
+              <a href="/"><i className="fab rotate  fa-twitter"/></a>
+              <a href="/"><i className="fab rotate fa-facebook-f"/></a>
+              <a href="/"><i className="fab rotate fa-google-plus-g"/></a>
+              <a href="/"><i className="fab rotate fa-tumblr"/></a>
+              <a href="/"><i className="fab rotate fa-pinterest-p"/></a>
+              <a href="/"><i className="fab rotate fa-linkedin-in"/></a>
             </div>
 
           </div>

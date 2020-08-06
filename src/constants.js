@@ -1,6 +1,5 @@
-import React from "react";
-
 //------------------Items for navigation menu---------------------
+
 export const MENU_ITEM_All = ["Productions", "Features", "Prising", "Help", "Contacts"];
 
 //---------------------Links for footer----------------------------

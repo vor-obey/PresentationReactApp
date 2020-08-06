@@ -19,7 +19,7 @@ class InputText extends Component {
   onSubmit = e => {
     const {value} = this.state;
     const {onSubmit} = this.props;
-    if(value.length < 5){
+    if (value.length < 5) {
       this.setState({
         error: true
       })
@@ -32,13 +32,11 @@ class InputText extends Component {
         })
       }
     }
-
-
   }
 
   render() {
-    const {title, placeholder, btnName} = this.props;
-    const {value, error}= this.state;
+    const {title, placeholder, btnName, inputType, inputName} = this.props;
+    const {value, error} = this.state;
 
     return (
       <div className="text-input__email">
@@ -46,18 +44,19 @@ class InputText extends Component {
         <h2>{title}</h2>
 
         <div className="subscribe-info-input">
-          
+
           <input
-            type="email"
+            type={inputType}
             placeholder={placeholder}
-            name="email"
+            name={inputName}
             onChange={this.onChangeHandler}
             value={value}/>
+
+          {error && <span className="error-message">Min length email 5 symbols</span>}
 
           <button type="submit" onClick={this.onSubmit}>
             {btnName}
           </button>
-          {error && <span className="error-message">Min length email 5 symbols</span>}
 
 
         </div>

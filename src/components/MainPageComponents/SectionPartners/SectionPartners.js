@@ -28,8 +28,8 @@ export class SectionPartners extends Component {
             <p className="partners-text">PARTNERS</p>
 
             <div className="partners-links">
-              <a href="#"><img src={DropboxImg} alt=""/></a>
-              <a href="#"><img src={EvernoteImg} alt=""/></a>
+              <a href="/"><img src={DropboxImg} alt=""/></a>
+              <a href="/"><img src={EvernoteImg} alt=""/></a>
             </div>
 
           </div>

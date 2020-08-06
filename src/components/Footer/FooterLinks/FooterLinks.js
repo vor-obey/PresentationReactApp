@@ -10,7 +10,7 @@ export class FooterLinks extends Component {
 
         <ul>
           {this.props.links.map((link, key) => {
-            return <li key={key}><a href="#">{link}</a></li>
+            return <li key={key}><a href="/">{link}</a></li>
           })}
         </ul>
 

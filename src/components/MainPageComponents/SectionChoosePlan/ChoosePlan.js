@@ -56,7 +56,7 @@ export class ChoosePlan extends Component {
                   to yourself, and to the trust I reposed in you.
                 </p>
 
-                <span className="bigger-team-link">Have a bigger team? <a href="#">Let"s talk</a></span>
+                <span className="bigger-team-link">Have a bigger team? <a href="http://google.com" target="_blank" rel="noopener noreferrer">Let"s talk</a></span>
 
               </div>
             </div>

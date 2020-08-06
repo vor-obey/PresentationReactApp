@@ -13,6 +13,8 @@ export class Subscribe extends Component {
             placeholder="Your e-mail"
             btnName="Subscribe"
             onSubmit={this.props.onSubmit}
+            inputType="email"
+            inputName="email"
           />
           <p>We promise to never spam you.</p>
 
