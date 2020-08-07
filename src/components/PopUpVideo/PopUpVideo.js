@@ -15,13 +15,12 @@ export class PopUpVideo extends Component {
   };
 
   render() {
-    console.log(this.props.popupVisible)
 
     const {popupVisible} = this.props;
     const url = "https://www.youtube.com/watch?v=bxncT29xu_o&list=PLUfMME5TZ-ERIguY662fnZ8xtEABFUUZu&index=3";
 
     return (
-      <div className={popupVisible ? "popup-container" : "unvisible"}>
+      <div className={popupVisible ? "popup-container" : "unvisible"} onClick={this.togglePopUp}>
         <div className="popup-video">
 
           <ReactPlayer
