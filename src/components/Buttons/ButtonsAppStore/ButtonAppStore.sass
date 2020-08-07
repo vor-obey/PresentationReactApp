@@ -46,12 +46,14 @@ a
 //----------------------------Style for button in footer-------------------
 
 .footer-app-store-btn
+  @include flexBox(null, center,center)
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5)
   color: #fff
   background: $black
   padding: 10px 20px 10px 10px
   border-radius: 10px
-  display: inline-block
+  max-width: fit-content
+  min-width: fit-content
   position: relative
   margin: 10px 0 40px 0
   cursor: pointer
