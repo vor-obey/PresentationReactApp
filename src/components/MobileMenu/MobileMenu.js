@@ -5,12 +5,23 @@ import {Link} from "react-router-dom";
 import {MainButton} from "../Buttons/MainButton/MainButton";
 
 export class MobileMenu extends Component {
+  constructor(props) {
+    super(props);
+    this.handlerVisible = this.handlerVisible.bind(this);
+  }
+
+  handlerVisible (){
+    this.props.handlerMenuVisible(
+      !this.props.visibleMenu
+  );
+}
+
   render() {
     const item = MENU_ITEM_All;
     return (
       <div className={this.props.visibleMenu ? "menu-mobile" : " menu-mobile menu-mobile__close"} >
 
-        <ul className="menu-nav-mob">
+        <ul className="menu-nav-mob" onClick={this.handlerVisible}>
           <Link to="/package"><li>{item[0]}</li></Link>
           <Link to="/"><li>{item[1]}</li></Link>
           <Link to="/"><li>{item[2]}</li></Link>

@@ -45,6 +45,7 @@ export class HeaderMain extends Component {
       <div className="header-wrapper">
 
         <MobileMenu
+          handlerMenuVisible={this.handlerStateMenuVisible}
           visibleMenu={visibleMenu}
           style={{display: "flex", background: "#fff", color: "#267df4"}}
         />
