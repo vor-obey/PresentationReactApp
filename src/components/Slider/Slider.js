@@ -45,8 +45,12 @@ export class Slider extends Component {
 
         <div className="slider">
 
-          <div className="move-left" onClick={this.scrollScreenLeft}><i className="fas fa-arrow-circle-left"/></div>
-          <div className="move-right" onClick={this.scrollScreenRight}><i className="fas fa-arrow-circle-right"/>
+          <div className="move-left" onClick={this.scrollScreenLeft}>
+            <i className="fas fa-arrow-circle-left"/>
+          </div>
+
+          <div className="move-right" onClick={this.scrollScreenRight}>
+            <i className="fas fa-arrow-circle-right"/>
           </div>
 
           <div className="slides">
@@ -66,7 +70,6 @@ export class Slider extends Component {
             }
 
           </div>
-
         </div>
       </div>
     );
