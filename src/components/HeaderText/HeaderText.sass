@@ -37,7 +37,6 @@
   span
     font-size: 16px
     margin-left: 10px
-    line-height: 1
 
   .fa-play
     font-size: 13px
@@ -62,3 +61,10 @@
 
   .header-text
     height: 800px
+
+//------------------Media max-width 767px-----------------
+
+@include max-screen($xs)
+  .watch-video-btn
+    span
+     line-height: 2
